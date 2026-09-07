@@ -7,7 +7,7 @@
     <?php foreach ($artists as $artist): ?>
     <tr>
         <td>
-            <?= $this->Html->link($artist->name, ['action' => 'view']) ?>
+            <?= $this->Html->link($artist->name, ['action' => 'view', $artist->id]) ?>
         </td>
         <td>
             <?= $artist->created->format(DATE_RFC850) ?>
