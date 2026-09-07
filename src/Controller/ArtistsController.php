@@ -9,4 +9,9 @@ class ArtistsController extends AppController
         $artists = $this->paginate($this->Artists);
         $this->set(compact('artists'));
     }
+
+    public function view(int $id): void{
+        $artist = $this->Artists->findById($id)->firstOrFail();
+        $this->set(compact('artist'));
+    }
 }
